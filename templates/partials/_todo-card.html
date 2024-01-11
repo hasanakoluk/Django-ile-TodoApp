@@ -1,0 +1,8 @@
+<div class="card" style="width: 18rem;">
+    <img src="{{todo.resim.url}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{todo.baslik}}</h5>
+      <p class="card-text">{{todo.aciklama}}</p>
+      <a href="{% url "detay_page" todo.slug %}" class="btn btn-primary">İncele</a>
+    </div>
+  </div>

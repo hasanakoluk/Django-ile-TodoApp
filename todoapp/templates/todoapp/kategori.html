@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}{{kategori.isim}}{% endblock title %}
+
+{% block content %}
+
+{% comment %} <h2>Kategori sayfasına geldin</h2> {% endcomment %}
+
+<div class="container">
+
+    {% for todo in todos %}
+    <h2>{{todo.baslik}}</h2>
+    
+    {% include "partials/_todo-card.html" %}
+  
+{% endfor %}
+
+</div>
+
+
+{% endblock content %}

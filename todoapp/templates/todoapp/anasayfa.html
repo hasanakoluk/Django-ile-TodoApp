@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}Todo anasayfa{% endblock title %}
+
+
+{% block content %}
+
+{% comment %} <h3>{{todos}}</h3> {% endcomment %}
+{% comment %} <h3>{{kategori}}</h3> {% endcomment %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <h3>Kategoriler</h3>
+            {% for kategori in kategoriler %}
+               <div class="kategori">
+                  <a href="{% url "kategori_page" kategori.slug %}" class="fs-3">{{kategori.isim}}</a>
+               </div>
+               
+            {% endfor %}
+        </div>
+        <div class="col-6">
+              <h3>Alt Kategoriler</h3>
+            {% for alt_kategori in alt_kategoriler %}
+            
+                <div class="alt_kategori">
+                    <a href="{% url "alt_kategori_page" alt_kategori.slug %}" class="fs-3">{{alt_kategori.isim}}</a>
+                </div>
+            
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+
+{% comment %} <h3>{{alt_kategoriler}}</h3> {% endcomment %}
+{% endblock content %}

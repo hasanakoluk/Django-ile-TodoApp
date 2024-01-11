@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}Todo Ekle{% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <div class="text-center">Todo Yaz</div>
+    <form method="POST" novalidate enctype='multipart/form-data'>
+        {% csrf_token %}
+
+        {{form}}
+       
+        <input type="submit" value="oluştur" class="btn btn-primary mt-2 w-100">
+    </form>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}{{alt_kategori.isim}}{% endblock title %}
+
+{% block content %}
+
+<div class="container">
+
+    {% for todo in todos %}
+    
+    
+    {% include "partials/_todo-card.html d-flex gap-3 mt-2 " %}
+  
+    {% endfor %}
+
+</div>
+
+{% endblock content %}

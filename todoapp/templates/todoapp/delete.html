@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}Tod Sil{% endblock title %}
+
+{% block content %}
+
+<div class="container text-center">
+    <h2>Todo Sil</h2>
+    
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+  
+        
+  
+          
+          <input type="submit" value="Sil" class="btn btn-danger mt-2 w-50">
+
+      </form>
+      <a href="{% url "index_page" %}" class="btn btn-secondary mt-2 w-50">Geri Dön</a>
+  
+
+</div>
+
+
+{% endblock content %}
